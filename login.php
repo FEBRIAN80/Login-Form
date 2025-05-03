@@ -1,20 +1,4 @@
-<?php
-session_start();
-include "config.php";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = md5($_POST['password']);
-
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password'");
-    if (mysqli_num_rows($result) === 1) {
-        $_SESSION['username'] = $username;
-        header("Location: dashboard.php");
-        exit();
-    } else {
-        $error = "Username atau password salah.";
-    }
-}
 ?>
 <!DOCTYPE html>
 <html lang="id">
