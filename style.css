@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: url('../img/bckg.jpg') no-repeat center center fixed;
+  background: url('bckg.jpg') no-repeat center center fixed; /*add your background image here broo*/
 
   background-size: cover;
   display: flex;
